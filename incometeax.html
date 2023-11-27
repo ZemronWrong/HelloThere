@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <a href="index.html">  Back to Home</a>
+    <title>Knight - Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Your existing CSS links -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+
+    <!-- New CSS for the tax calculator -->
+    <style>
+        body {font-family: "Lato", sans-serif}
+        .mySlides {display: none}
+        table th, td {
+            border: 1px solid rgb(102, 51, 153);
+            border-collapse: collapse;
+            color: rgb(0, 0, 0)
+        }
+        #calculate {
+            text-align:center;
+            color:#771477;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing content -->
+    <!-- ... -->
+
+    <!-- Add the Income Tax Calculator section -->
+    <section id="income-tax-calculator" class="parallax-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+                        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+                            <h2 class="w3-wide">Income Tax Calculator</h2>
+                            <br>
+                            <h4>
+                        
+                                    <table>
+                                        <tr>
+                                            <th colspan="2" for="TaxableIncome">Taxable Income:</th>
+                                            <td><input id="TaxableIncome" type="number"></td>
+                                            <th><button id="calculate">Calculate</button></th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2" for="IncomeTax">Income Tax</th>
+                                            <td><input id="IncomeTax" type="number" readonly></td>
+                                        </tr>
+                                    </table>
+                            
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Your existing footer and script links -->
+    <!-- ... -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <!-- JavaScript for the Income Tax Calculator -->
+    <script>
+        document.getElementById("calculate").addEventListener("click", function () {
+            var IncomeTax, TaxableIncome;
+            TaxableIncome = document.getElementById("TaxableIncome").value * 1;
+            IncomeTax = 0;
+            // Calculation logic goes here...
+            // ...
+            document.getElementById("IncomeTax").value = IncomeTax;
+        });
+    </script>
+</body>
+</html>

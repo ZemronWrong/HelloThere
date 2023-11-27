@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <a href="index.html">  Back to Home</a>
+    <title>Natural Numbers Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label, input[type="number"], button {
+            padding: 8px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #2ecc71;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #27ae60;
+        }
+        #results {
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Natural Numbers Calculator</h1>
+    <label for="numberInput">Enter a number (N):</label>
+    <input type="number" id="numberInput">
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="results"></div>
+
+    <script>
+        function calculateFactorial(n) {
+            let factorial = 1;
+            let i = 1;
+            while (i <= n) {
+                factorial *= i;
+                i++;
+            }
+            return factorial;
+        }
+
+        function calculateSum(n) {
+            let sum = 0;
+            let num = 1;
+            do {
+                sum += num;
+                num++;
+            } while (num <= n);
+            return sum;
+        }
+
+        function calculateAverage(n) {
+            let sum = 0;
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+            const average = sum / n;
+            return average;
+        }
+
+        function calculate() {
+            const n = parseInt(document.getElementById('numberInput').value);
+            if (isNaN(n) || n <= 0) {
+                alert('Please enter a valid positive number.');
+                return;
+            }
+
+            const factorialResult = calculateFactorial(n);
+            const sumResult = calculateSum(n);
+            const averageResult = calculateAverage(n);
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <p>Factorial of ${n} is: ${factorialResult}</p>
+                <p>Sum of first ${n} natural numbers is: ${sumResult}</p>
+                <p>Average of first ${n} natural numbers is: ${averageResult}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

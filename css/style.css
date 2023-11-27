@@ -1,0 +1,37 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Title styles */
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input and button styles */
+input[type="number"],
+button {
+    padding: 8px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2ecc71;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+/* Result styles */
+span {
+    font-weight: bold;
+    color: #333;
+    margin-left: 20px;
+}
