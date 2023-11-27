@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My World</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link your CSS file here -->
+</head>
+<body>
+
+<!-- Rest of your HTML content -->
+<h2>Temperature Conversion</h2>
+
+<p>
+    Celsius: <input type="number" id="celsiusInput">
+    <button onclick="convertCelsiusToFahrenheit()">Convert to Fahrenheit</button>
+    <span id="resultFahrenheit"></span>
+</p>
+
+<p>
+    Fahrenheit: <input type="number" id="fahrenheitInput">
+    <button onclick="convertFahrenheitToCelsius()">Convert to Celsius</button>
+    <span id="resultCelsius"></span>
+</p>
+
+<hr>
+
+<h2>Length Conversion</h2>
+
+<p>
+    Meters: <input type="number" id="metersInput">
+    <button onclick="convertMetersToFeet()">Convert to Feet</button>
+    <span id="resultFeet"></span>
+</p>
+
+<p>
+    Feet: <input type="number" id="feetInput">
+    <button onclick="convertFeetToMeters()">Convert to Meters</button>
+    <span id="resultMeters"></span>
+</p>
+ <br><br>
+ <a href="index.html">  Back to Home</a>
+<script>
+function convertCelsiusToFahrenheit() {
+    const celsius = parseFloat(document.getElementById("celsiusInput").value);
+    const fahrenheit = (celsius * 9 / 5) + 32;
+    document.getElementById("resultFahrenheit").innerText = `Result: ${fahrenheit}°F`;
+}
+
+function convertFahrenheitToCelsius() {
+    const fahrenheit = parseFloat(document.getElementById("fahrenheitInput").value);
+    const celsius = (fahrenheit - 32) * 5 / 9;
+    document.getElementById("resultCelsius").innerText = `Result: ${celsius}°C`;
+}
+
+function convertMetersToFeet() {
+    const meters = parseFloat(document.getElementById("metersInput").value);
+    const feet = meters * 3.28084;
+    document.getElementById("resultFeet").innerText = `Result: ${feet} feet`;
+}
+
+function convertFeetToMeters() {
+    const feet = parseFloat(document.getElementById("feetInput").value);
+    const meters = feet / 3.28084;
+    document.getElementById("resultMeters").innerText = `Result: ${meters} meters`;
+}
+</script>
+
+</body>
+</html>
+
+
